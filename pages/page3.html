@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=10; IE=11" />
+
+    <meta charset="utf-8" />
+
+    <!-- Prevent viewport scaling for mobile devices -->
+    <meta content="True" name="HandheldFriendly" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="dcterms.isVersionOf" content="IBS-2.30.3.4-SNAPSHOT"/>
+
+    <title>
+        Booking details
+        - Change booking
+    </title>
+
+    <link rel="stylesheet" href="/resources/2.30.3.4-SNAPSHOT/css/jquery-ui.css" media="screen, projection" />
+    <link rel="stylesheet" href="/resources/2.30.3.4-SNAPSHOT/css/screen.css" media="screen, projection, print" />
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="/resources/2.30.3.4-SNAPSHOT/css/ie9.css" media="screen, projection, print" />
+    <![endif]-->
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="/resources/2.30.3.4-SNAPSHOT/css/ie8.css" media="screen, projection, print" />
+    <script src="/resources/2.30.3.4-SNAPSHOT/js/respond.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        (function(){if(window.opera){return;}
+            setTimeout(function(){var a=document,g,b={families:(g=
+                            ["nta"]),urls:["/resources/2.30.3.4-SNAPSHOT/css/fonts-ie8.css"]},
+                    c="/resources/2.30.3.4-SNAPSHOT/js/webfont-debug.js",d="script",
+                    e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+                    ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+                    .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+        })()
+    </script>
+    <![endif]-->
+
+
+
+    <!--[if gte IE 9]><!-->
+    <link href="/resources/2.30.3.4-SNAPSHOT/css/fonts.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script src="/resources/2.30.3.4-SNAPSHOT/js/min/all-min.js" type="text/javascript"></script>
+    <script src="/resources/2.30.3.4-SNAPSHOT/js/stageprompt.2.0.1.js" type="text/javascript"></script>
+    <script src="/resources/2.30.3.4-SNAPSHOT/js/ga-events.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var RecaptchaOptions = {
+            theme : 'clean'
+        };
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-35490666-1', 'auto', {
+            allowLinker: true,
+            cookieDomain: getCookieDomain()
+        });
+
+        ga('set', 'anonymizeIp', true);
+        ga('require', 'linker');
+
+        if (document.URL.toUpperCase().indexOf('/APPLICATION') != -1) {
+            ga('send', 'pageview', '/application/' + document.title);
+        } else if (document.URL.toUpperCase().indexOf('/MANAGE') != -1 || document.URL.toUpperCase().indexOf('/LOGIN') != -1) {
+            ga('send', 'pageview', '/manage/' + document.title);
+        } else {
+            ga('send', 'pageview', '/' + document.title);
+        }
+
+        function getCookieDomain() {
+            var gaProductionMode = true;
+
+            if (gaProductionMode == true) {
+                if (document.domain == 'www.gov.uk') {
+                    return '.www.gov.uk';
+                } else {
+                    return document.domain;
+                }
+            } else {
+                return 'none';
+            }
+        }
+
+        $(function(){
+            GOVUK.performance.stageprompt.setupForGoogleAnalytics();
+            DVSA.ga.event.setupForGoogleAnalytics();
+        });
+    </script>
+
+    <script type="text/javascript">
+        if (document.URL.toUpperCase().indexOf('TIMEOUT') == -1) {
+            var timeout = 30 * 60000;
+            setTimeout(function() {
+                var subContext = "";
+                if (document.URL.toUpperCase().indexOf('/APPLICATION') != -1) {
+                    subContext = "/application";
+                } else if (document.URL.toUpperCase().indexOf('/MANAGE') != -1 || document.URL.toUpperCase().indexOf('/LOGIN') != -1) {
+                    subContext = "/manage";
+                }
+                window.location.href = "" + subContext + "/timeout";
+            }, timeout);
+        }
+    </script>		</head>
+
+
+<body id="page-ibs-summary">
+
+<div class="accessibility" role="note">
+    <p>Accessibility links</p>
+    <a href="#main">Skip to the main content</a>
+</div><!-- / .accessibility -->
+<div id="page"         data-journey="pp-change-practical-driving-test-public:change-booking"
+>
+
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <header role="banner" id="global-header" class="with-proposition">
+        <div class="header-wrapper">
+            <div class="header-global">
+                <div class="header-logo">
+                    <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+                        <img src="/resources/2.30.3.4-SNAPSHOT/img/branding/gov.uk_logotype_crown.png" alt=""> GOV.UK
+                    </a>
+                </div>
+            </div>
+            <div class="header-proposition">
+                <div class="content">
+                    <nav id="proposition-menu">
+                        <p id="proposition-name">
+                            Change your driving test
+                        </p>
+                        <p id="proposition-name-short">
+                            Change test
+                        </p>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header><!-- / #banner -->
+
+    <div id="global-cookie-message">
+        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+    </div>
+    <div id="global-browser-prompt">
+        <p>
+            <a href="https://www.gov.uk/help/browsers">Upgrade your web browser</a>
+            (the software you use to access the internet), it&rsquo;s out of date
+            <a id="global-browser-prompt-dismiss" class="dismiss" title="Dismiss this message" href="#"></a>
+        </p>
+    </div>
+    <div id="unsupported-browser-prompt">
+        <p>You need to use another web browser (the software you use to access the internet) as we don&rsquo;t support the one you&rsquo;re using.</p>
+    </div>
+    <div id="main" role="main">
+        <header class="booking-change-incomplete">
+            <div id="header-title">
+                <h1>View booking</h1>
+                <dl>
+                    <dt>Driving licence number:</dt>
+                    <dd>DOWE9906210HJ9JN</dd>
+                </dl>
+            </div>
+            <div id="header-buttons">
+                <div id="header-button-container">
+                    <a href="/manage/j_spring_security_logout" class="button">Sign out</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="confirm-booking-details" class="formatting">
+
+
+            <section>
+                <header>
+                    <h1>Date and time of test</h1>
+                    <a href="/manage?execution=e1s1&amp;csrftoken=w0kaH9RZxK1Fk7g2om7juLgY6eJwynEK&amp;_eventId=editTestDateTime" class="button" id="date-time-change">Change <span class="visuallyhidden">Date and time of test</span></a>
+                </header>
+
+
+                <div class="contents">
+                    <dl>
+                        <dd>Friday 27 January 2017 12:23pm</dd>
+
+                        <dt>Last date to change or cancel</dt>
+                        <dd>Monday 23 January 2017</dd>
+
+
+                    </dl>
+                </div>
+            </section>
+
+            <section>
+                <header>
+                    <h1>Test centre</h1>
+                    <a href="/manage?execution=e1s1&amp;csrftoken=w0kaH9RZxK1Fk7g2om7juLgY6eJwynEK&amp;_eventId=editTestCentre" class="button" id="test-centre-change">Change <span class="visuallyhidden">Test centre</span></a>
+                </header>
+
+                <div class="contents">
+                    <dl>
+                        <dd>West Didsbury (Manchester)</dd>
+                    </dl>
+                    <span class="clear"></span>
+                    <span class="google-map-link"><a href="https://maps.google.com/?q=53.4247666,-2.2579375" title="Opens new window" rel="external" onclick="window.open(this.href);return false;" >Google map</a></span>
+                    <span id="centre-facilities-button" class="more"></span>
+
+                    <div id="centre-facilities-info" class="formatting clear visuallyhidden">
+                        <h3> Facilities </h3>
+
+                        <dl>
+                            <dt>Toilet:</dt>
+                            <dd>Male, female and disabled toilets are available</dd>
+
+
+                            <dt>Parking:</dt>
+                            <dd>A car park is available at the test centre</dd>
+
+                        </dl>
+
+                        <p class="clear"></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h1>Type of test</h1>
+                    <a href="/manage?execution=e1s1&amp;csrftoken=w0kaH9RZxK1Fk7g2om7juLgY6eJwynEK&amp;_eventId=editTestType" class="button" id="test-type-change">Change <span class="visuallyhidden">Type of test</span></a>
+                </header>
+
+                <div class="contents">
+                    <dl>
+                        <dd>Car</dd>
+
+                        <dt>Fee</dt>
+                        <dd>&pound;62.00</dd>
+
+                        <dt>Test status</dt>
+                        <dd>Booked</dd>
+                        <dt>Extended test</dt>
+                        <dd>
+                            No
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- Vehicle Information Start -->
+            <!-- Vehicle Information End  -->
+
+            <section>
+                <header>
+                    <h1>Candidate details</h1>
+                    <a href="/manage?execution=e1s1&amp;csrftoken=w0kaH9RZxK1Fk7g2om7juLgY6eJwynEK&amp;_eventId=editCandidateDetails" class="button" id="candidate-change">Change <span class="visuallyhidden">Candidate details</span></a>
+                </header>
+            </section>
+
+            <section>
+                <header>
+                    <h1>Special requirements</h1>
+                    <a href="/manage?execution=e1s1&amp;csrftoken=w0kaH9RZxK1Fk7g2om7juLgY6eJwynEK&amp;_eventId=changeSpecialNeeds" class="button" id="requirements-change">Change <span class="visuallyhidden">Special requirements</span></a>
+                </header>
+            </section>
+
+            <section>
+                <header>
+                    <h1>Instructor&rsquo;s reference number</h1>
+                    <a href="/manage?execution=e1s1&amp;csrftoken=w0kaH9RZxK1Fk7g2om7juLgY6eJwynEK&amp;_eventId=editInstructorPRN" class="button" id="instructor-edit">Change <span class="visuallyhidden">Instructor&rsquo;s reference number</span></a>
+                </header>
+
+                <div class="contents">
+                    <dl>
+                        <dt class="visuallyhidden"></dt>
+                        <dd>
+                            Not entered
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+
+            <a href="/manage?execution=e1s1&amp;csrftoken=w0kaH9RZxK1Fk7g2om7juLgY6eJwynEK&amp;_eventId=cancelTest" class="button cancel warning cancel-test fr">Cancel test</a>
+        </section>
+
+    </div><!-- / #main -->
+
+</div><!-- / #page -->
+
+
+
+
+
+
+
+<footer class="group js-footer" id="footer" role="contentinfo">
+    <div class="footer-wrapper">
+        <div class="footer-meta">
+            <div class="footer-meta-inner">
+                <ul>
+                    <li><a href="https://www.gov.uk/contact-driving-standards-agency-dsa">Help</a></li>
+                    <li><a href="https://www.gov.uk/help/cookies">Cookies</a></li>
+
+
+                    <li><strong>English</strong></li>
+                    <li lang="cy"><a href="/manage?execution=e1s1&amp;locale=cy_GB">Cymraeg</a></li>
+
+                </ul>
+            </div>
+
+            <div class="copyright">
+                <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">&copy; Crown Copyright</a>
+            </div>
+        </div>
+    </div>
+</footer><!-- / #footer -->
+
+<script src="/resources/2.30.3.4-SNAPSHOT/js/govuk-template.js" type="text/javascript"></script>
+<div class="accessibility" role="note">
+    <small>End of page.</small>
+    <hr />
+    <a href="#page">Return to top of page</a>
+</div><!-- / .accessibility -->
+<script>
+    window.onload = function() {
+        var markupText = 'More details';
+        $('.more').append(markupText);
+    };
+</script>
+</body>
+
+</html>

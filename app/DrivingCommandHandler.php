@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Booking;
 use Behat\Mink\Mink;
 
 class DrivingCommandHandler
@@ -96,6 +97,20 @@ class DrivingCommandHandler
         $dateText = $session->getPage()->find('css', '#availability-results ul > li a span')->getText();
 
         return \DateTime::createFromFormat('l j F Y g:ia', $dateText);
+    }
+
+    public function storeBooking(\DateTime $date)
+    {
+        $booking = Booking::where('date', '<=', $date)->first();
+
+        if (isset($booking)) {
+            return false;
+        }
+
+        $booking = new Booking();
+        $booking->date = $date;
+
+        return $booking->save();
     }
 
 }

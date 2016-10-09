@@ -65,10 +65,13 @@ class Driving extends Command
      */
     public function handle()
     {
-        $date = $this->getHandler()->getDateTime();
+        $handler = $this->getHandler();
+        $date = $handler->getDateTime();
 
-        // TODO: add date into db if not already
-        // determine if it's earlier than the earliest date
-        // If it is then send an email out
+        if ($handler->storeBooking($date)) {
+            $this->line('There is an earlier booking available on ' . $date->format('l j F Y g:ia'));
+        } else {
+            $this->line('No earlier bookings availalbe.');
+        }
     }
 }

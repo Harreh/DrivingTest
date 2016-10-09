@@ -16,7 +16,7 @@ class CreateBookingsTable extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTime('date');
-            $table->boolean('dismissed');
+            $table->boolean('dismissed')->default(false);
 
             $table->timestamps();
         });

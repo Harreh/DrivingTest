@@ -60,15 +60,14 @@ class Driving extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return mixed
      */
     public function handle()
     {
         $handler = $this->getHandler();
         $date = $handler->getDateTime();
 
-        if ($handler->storeBooking($date)) {
+        if ($booking = $handler->storeBooking($date)) {
+            $handler->sendEmail($booking);
             $this->line('There is an earlier booking available on ' . $date->format('l j F Y g:ia'));
         } else {
             $this->line('No earlier bookings availalbe.');

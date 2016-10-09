@@ -4,6 +4,8 @@ namespace App;
 
 use App\Models\Booking;
 use Behat\Mink\Mink;
+use Illuminate\Mail\Message;
+use Illuminate\Support\Facades\Mail;
 
 class DrivingCommandHandler
 {
@@ -99,6 +101,11 @@ class DrivingCommandHandler
         return \DateTime::createFromFormat('l j F Y g:ia', $dateText);
     }
 
+    /**
+     * @param \DateTime $date
+     *
+     * @return Booking|false
+     */
     public function storeBooking(\DateTime $date)
     {
         $booking = Booking::where('date', '<=', $date)->first();
@@ -110,7 +117,27 @@ class DrivingCommandHandler
         $booking = new Booking();
         $booking->date = $date;
 
-        return $booking->save();
+        if ($booking->save()) {
+            return $booking;
+        }
+
+        return false;
+    }
+
+    /**
+     * @param Booking $booking
+     *
+     * @return mixed
+     */
+    public function sendEmail(Booking $booking)
+    {
+        $data = [
+            'booking' => $booking
+        ];
+
+        return Mail::send('emails.alert', $data, function (Message $message) {
+            $message->to($this->getConfig('email'))->subject('Driving test booking alert');
+        });
     }
 
 }

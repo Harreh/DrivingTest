@@ -7,7 +7,8 @@
         "laravel/lumen-framework": "5.3.*",
         "vlucas/phpdotenv": "~2.2",
         "behat/mink": "^1.7",
-        "behat/mink-goutte-driver": "^1.2"
+        "behat/mink-goutte-driver": "^1.2",
+        "illuminate/mail": "^5.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
